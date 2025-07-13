@@ -1,0 +1,276 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NineAsh Discord Bot – Command Handler & Features</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-brand">
+            <a href="index.html">SS</a>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+      <div id="command-handler" class="bot-hero">
+        <div class="hero-content">
+          <h1><i class="fab fa-discord"></i> NineAsh Bot – Command Handler</h1>
+          <p>A powerful Discord moderation & utility bot built with Python</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Join Bot Section - Top Left -->
+    <div class="top-left-info">
+      <img src="bot.png" alt="NineAsh Bot Logo" class="bot-logo">
+      <a href="https://discord.gg/BffGSZAKTN" class="join-btn" target="_blank">
+        <i class="fab fa-discord"></i> Join Bot
+      </a>
+    </div>
+
+    <main>
+      <div class="layout">
+        <div class="main-content">
+          <!-- Overview -->
+          <section id="bot-overview">
+            <h2><i class="fas fa-info-circle"></i> Bot Overview</h2>
+            <p><strong>NineAsh</strong> is a custom Discord moderation &amp; utility bot crafted with <code>Python</code> and <code>discord.py</code>. The core focus here is the <em>command‑handler</em> architecture that powers every feature – from anti‑spam to music playback.</p>
+            <p><em>Timeline:</em> <span class="timeline">Jun&nbsp;2025 –&nbsp;Present</span></p>
+          </section>
+          <!-- Features -->
+          <section id="features">
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+
+            <div class="feature-group">
+              <h3><i class="fas fa-shield-alt"></i> Moderation System</h3>
+              <ul>
+                <li>✅ Custom profanity filter (English + Hindi).</li>
+                <li>✅ Anti‑spam timeout (5+ messages in &lt; 5 s).</li>
+                <li>✅ <em>Mod‑mail</em> bridge between DMs &amp; staff channel.</li>
+                <li>✅ Role‑restricted command groups.</li>
+              </ul>
+            </div>
+
+            <div class="feature-group">
+              <h3><i class="fas fa-comments"></i> Interactive Chat</h3>
+              <ul>
+                <li>💬 Friendly replies for casual greetings.</li>
+                <li>❓ General‑knowledge Q&amp;A.</li>
+                <li>🎤 Joke &amp; small‑talk fallback.</li>
+              </ul>
+            </div>
+
+            <div class="feature-group">
+              <h3><i class="fas fa-search"></i> Search Utilities</h3>
+              <ul>
+                <li><code>wiki &lt;query&gt;</code> – instant Wikipedia summaries.</li>
+                <li><code>search &lt;query&gt;</code> / <code>!search</code> – DuckDuckGo web search.</li>
+              </ul>
+            </div>
+            
+
+            <div class="feature-group">
+              <h3><i class="fas fa-music"></i> Music &amp; Media</h3>
+              <ul>
+                <li>▶️ Queue, play &amp; control tracks in voice channels.</li>
+                <li>👋 Custom audio/video welcomes.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Commands -->
+          <section id="commands">
+            <h2><i class="fas fa-terminal"></i> Command Reference</h2>
+
+            <div class="command-grid">
+              <div class="skill-item">
+                <div class="command-icon">
+                  <i class="fas fa-cog"></i>
+                </div>
+                <h3>General</h3>
+                <ul>
+                  <li><code>!help</code> – display all commands.</li>
+                  <li><code>!ping</code> – latency check.</li>
+                </ul>
+              </div>
+
+              <div class="skill-item">
+                <div class="command-icon">
+                  <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Moderation</h3>
+                <ul>
+                  <li><code>!kick &lt;user&gt;</code>, <code>!ban &lt;user&gt;</code></li>
+                  <li><code>!timeout &lt;user&gt; &lt;secs&gt;</code></li>
+                  <li><code>!triggers</code> – list auto‑responses.</li>
+                  <li><code>!reply &lt;user&gt; &lt;msg&gt;</code> – respond to mod‑mail.</li>
+                </ul>
+              </div>
+
+              <div class="skill-item">
+                <div class="command-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <h3>Music</h3>
+                <ul>
+                  <li><code>!play &lt;url/search&gt;</code></li>
+                  <li><code>!skip</code>, <code>!pause</code>, <code>!queue</code></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tech -->
+          <section id="tech">
+            <h2><i class="fas fa-microchip"></i> Technical Highlights</h2>
+            <p>The bot is built on an event‑driven architecture. A central dispatcher maps <code>Message</code> and <code>Interaction</code> events to modular cogs, enabling:</p>
+            <ul>
+              <li>🔌 Hot‑reload of cog modules.</li>
+              <li>📑 Structured logging to JSON.</li>
+              <li>🗄️ SQLite persistence for spam counters.</li>
+              <li>🛡️ Graceful error boundaries with user‑friendly replies.</li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <h2><i class="fas fa-folder"></i> My Projects</h2>
+          <details open>
+            <summary><img src="discord.webp" alt="Discord" class="icon"> Discord Bot</summary>
+            <ul>
+              <li><a class="active" href="#command-handler">Command Handler (you are here)</a></li>
+              <li><a href="music-bot.html">Music Bot</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary><img src="software.png" alt="Software" class="icon"> Software</summary>
+            <ul>
+              <li><a href="#">Desktop Tools</a></li>
+              <li><a href="#">Mini Utilities</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary><img src="video.jpg" alt="Video" class="icon"> Video Editing</summary>
+            <ul>
+              <li><a href="#">Shorts &amp; Reels</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary><img src="games.png" alt="Games" class="icon"> Games</summary>
+            <ul>
+              <li><a href="game/basic shanee/snake-game.html">Snake Game</a></li>
+              <li><a href="#">Chess</a></li>
+              <li><a href="#">Unreal Engine Game</a></li>
+            </ul>
+          </details>
+        </aside>
+      </div>
+
+      <!-- Slider -->
+      <section id="slider-section">
+        <h2><i class="fas fa-images"></i> Live Preview Gallery</h2>
+        <div id="Slider">
+          <input type="radio" name="slider" id="s1" checked>
+          <input type="radio" name="slider" id="s2">
+          <input type="radio" name="slider" id="s3">
+          <input type="radio" name="slider" id="s4">
+
+          <div class="slides">
+            <div class="slide s1">
+              <img src="MAIN 3.png" alt="Profanity filter in action">
+              <h3><a href="#features">Abusive‑Words Filter</a></h3>
+              <p>Automatic deletion + warning message.</p>
+            </div>
+            <div class="slide s2">
+              <img src="mod.jpg" alt="Mod‑mail screenshot">
+              <h3><a href="#features">Mod‑mail Bridge</a></h3>
+              <p>Staff can reply directly from a private channel.</p>
+            </div>
+            <div class="slide s3">
+              <img src="MAIN2.png" alt="Wikipedia command output">
+              <h3><a href="#features">Wikipedia Command</a></h3>
+              <p>Instant summaries inside an embed.</p>
+            </div>
+            <div class="slide s4">
+              <img src="serch.png" alt="Web search results embed">
+              <h3><a href="#features">Web Search</a></h3>
+              <p>DuckDuckGo search with top links.</p>
+            </div>
+          </div>
+
+          <div id="content">
+            <label for="s1"></label>
+            <label for="s2"></label>
+            <label for="s3"></label>
+            <label for="s4"></label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-content">
+        <h3><i class="fas fa-envelope"></i> Get In Touch</h3>
+        <p>Feel free to reach out – always open to chatting tech &amp; collaboration.</p>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> <a href="mailto:siddharthsri9889@gmail.com">siddharthsri9889@gmail.com</a></p>
+          <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siddharth-srivastava-409097317" target="_blank">LinkedIn</a></p>
+          <p><i class="fab fa-github"></i> <a href="https://github.com/ssneon1" target="_blank">GitHub</a></p>
+        </div>
+        <p>&copy; 2025 Siddharth Srivastava. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile navigation toggle
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add scroll effect to navigation
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.main-nav');
+        if (window.scrollY > 100) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+    </script>
+  </body>
+  </html>
