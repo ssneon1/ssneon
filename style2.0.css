@@ -436,6 +436,19 @@ section {
   color: white;
 }
 
+.about-user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  background: none;
+  border: none;
+  box-shadow: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
 /* ====== SKILLS SECTION ====== */
 .skills {
   background: rgba(0, 0, 0, 0.6);
