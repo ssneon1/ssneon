@@ -146,7 +146,7 @@
         <div class="about-image">
           <div class="image-container">
             <div class="image-placeholder">
-              <i class="fas fa-user"></i>
+              <img src="gg.png" alt="User Photo" class="about-user-photo">
             </div>
           </div>
         </div>
@@ -357,11 +357,11 @@
           </div>
         </div>
         <div class="contact-form">
-          <form <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
-            <input type="hidden" name="access_key" value=d650ef95-514e-44c4-bc55-9a44bc12869f>
+            <input type="hidden" name="d650ef95-514e-44c4-bc55-9a44bc12869f" value=d650ef95-514e-44c4-bc55-9a44bc12869f>
             <div class="form-group">
               <input type="email" id="email" name="email" placeholder="Your Email" required>
             </div>
@@ -373,6 +373,7 @@
               Send Message
             </button>
           </form>
+          <div id="form-success" style="display:none;color:limegreen;font-weight:bold;margin-top:1em;text-align:center;">Thank you! Your message has been sent.</div>
         </div>
       </div>
     </div>
@@ -406,5 +407,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+// Feedback form AJAX for Web3Forms
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      document.getElementById('form-success').style.display = 'block';
+      contactForm.reset();
+    } else {
+      alert('There was a problem sending your message. Please try again.');
+    }
+  });
+}
+</script>
 </body>
 </html>
